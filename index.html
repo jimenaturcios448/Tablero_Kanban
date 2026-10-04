@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero Kanban</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="etiqueta">Organiza tu flujo de trabajo</p>
+    <h1>Tablero Kanban</h1>
+
+    <div class="progreso">
+      <div class="progreso-pista">
+        <div class="progreso-barra" id="barra"></div>
+      </div>
+      <span id="porcentaje">0% completado</span>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="column" data-estado="porhacer">
+      <h2><span class="punto"></span>Por hacer <span class="contador">0</span></h2>
+      <div class="lista"></div>
+      <form class="nueva">
+        <input type="text" placeholder="Añadir tarea..." maxlength="80" required>
+        <button type="submit" aria-label="Añadir tarea">+</button>
+      </form>
+    </section>
+
+    <section class="column" data-estado="enproceso">
+      <h2><span class="punto"></span>En proceso <span class="contador">0</span></h2>
+      <div class="lista"></div>
+      <form class="nueva">
+        <input type="text" placeholder="Añadir tarea..." maxlength="80" required>
+        <button type="submit" aria-label="Añadir tarea">+</button>
+      </form>
+    </section>
+
+    <section class="column" data-estado="hecho">
+      <h2><span class="punto"></span>Hecho <span class="contador">0</span></h2>
+      <div class="lista"></div>
+      <form class="nueva">
+        <input type="text" placeholder="Añadir tarea..." maxlength="80" required>
+        <button type="submit" aria-label="Añadir tarea">+</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
